@@ -523,13 +523,18 @@
                                                     <div class="col-md-12">
                                                         {{-- IMPORTE --}}
                                                         <label for="">IMPORTE</label>  
-                                                        <x-adminlte-input name="importe" id="importe" placeholder="Ingrese importe" label-class="text-lightblue">
+                                                        <x-adminlte-select name="importe" id="importe" placeholder="Ingrese importe" label-class="text-lightblue">
                                                             <x-slot name="prependSlot">
                                                                 <div class="input-group-text">
                                                                     <i class="fas fa-coins text-dark"></i>
                                                                 </div>
                                                             </x-slot>
-                                                        </x-adminlte-input>  
+                                                            <option>-- selecione --</option>
+                                                            <option>179.90</option>
+                                                            <option>200.90</option>
+                                                            <option>345.90</option>
+                                                            <option>679.00</option>
+                                                        </x-adminlte-select>  
                                                     </div>
                                                 </div>
                                             </div>
