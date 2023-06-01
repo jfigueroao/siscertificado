@@ -110,7 +110,7 @@
                                                         <x-adminlte-input type="date" name="fechaExped" id="fechaExped" placeholder="Ingrese Fecha" label-class="text-lightblue">
                                                             <x-slot name="prependSlot">
                                                                 <div class="input-group-text">
-                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                    <i class="fas fa-calendar text-dark"></i>
                                                                 </div>
                                                             </x-slot>
                                                         </x-adminlte-input>  
@@ -186,7 +186,7 @@
                                                         <x-adminlte-input type="number" name="telefono" id="telefono" placeholder="Ingrese telefono" label-class="text-lightblue">
                                                             <x-slot name="prependSlot">
                                                                 <div class="input-group-text">
-                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                    <i class="fas fa-phone-alt text-dark"></i>
                                                                 </div>
                                                             </x-slot>
                                                         </x-adminlte-input>  
@@ -266,7 +266,7 @@
                                                             <x-adminlte-input type="text" name="dirEstable" id="dirEstable" placeholder="Ingrese dirección" label-class="text-lightblue">
                                                                 <x-slot name="prependSlot">
                                                                     <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
+                                                                        <i class="fas fa-map-pin text-dark"></i>
                                                                     </div>
                                                                 </x-slot>
                                                             </x-adminlte-input>
@@ -426,12 +426,12 @@
                                                 <div class="col-md-4">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            {{-- TIPO DE NIVEL --}}
-                                                            <label for="">TIPO DE NIVEL</label>  
+                                                            {{-- NIVEL DE RIESGO --}}
+                                                            <label for="">NIVEL DE RIESGO</label>  
                                                             <x-adminlte-select type="text" name="tipoNivel" id="tipoNivel" placeholder="Ingrese Nivel" label-class="text-lightblue">
                                                                 <x-slot name="prependSlot">
                                                                     <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
+                                                                        <i class="fas fa-exclamation-triangle text-dark"></i>
                                                                     </div>
                                                                 </x-slot>
                                                                 <option>--Seleccione--</option>
@@ -462,11 +462,11 @@
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             {{-- 2 --}}
-                                                            <label for="">2</label>  
+                                                            <label for="">ESTABLECIMIENTO</label>  
                                                             <x-adminlte-textarea type="text" name="2" id="2" placeholder="Ingrese zona" label-class="text-lightblue">
                                                                 <x-slot name="prependSlot">
                                                                     <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
+                                                                        <i class="fas fa-map-pin text-dark"></i>
                                                                     </div>
                                                                 </x-slot>
                                                             </x-adminlte-textarea>  
@@ -496,7 +496,7 @@
                                                         <x-adminlte-input name="reciboPago" id="reciboPago" placeholder="Ingrese recibo" label-class="text-lightblue">
                                                             <x-slot name="prependSlot">
                                                                 <div class="input-group-text">
-                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                    <i class="fas fa-receipt text-dark"></i>
                                                                 </div>
                                                             </x-slot>
                                                         </x-adminlte-input>  
@@ -511,7 +511,7 @@
                                                         <x-adminlte-input type="date" name="fechaPago" id="fechaPago" placeholder="Ingrese fecha" label-class="text-lightblue">
                                                             <x-slot name="prependSlot">
                                                                 <div class="input-group-text">
-                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                    <i class="fas fa-calendar text-dark"></i>
                                                                 </div>
                                                             </x-slot>
                                                         </x-adminlte-input>  
@@ -526,83 +526,83 @@
                                                         <x-adminlte-input name="importe" id="importe" placeholder="Ingrese importe" label-class="text-lightblue">
                                                             <x-slot name="prependSlot">
                                                                 <div class="input-group-text">
-                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                    <i class="fas fa-coins text-dark"></i>
                                                                 </div>
                                                             </x-slot>
                                                         </x-adminlte-input>  
                                                     </div>
                                                 </div>
                                             </div>
-                                            </div>       
-                                        </div>
-                                    </x-adminlte-card>
-                                </div>
+                                        </div>       
+                                    </div>
+                                </x-adminlte-card>
+                            </div>
                                 {{-- @push('js')<script>$(() => $("#drPlaceholder").val(''))</script>@endpush --}}
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <button class="btn btn-primary" name="btnBuscar" id="btnBuscar" type="submit">
+                                        <i class="fas fa-upload"></i>
+                                        Registrar
+                                    </button>                                                                       
+                                </div>                                       
                             </div>
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <button class="btn btn-primary" name="btnBuscar" id="btnBuscar" type="submit">
-                                            <i class="fas fa-upload"></i>
-                                            Registrar
-                                        </button>                                                                       
-                                    </div>                                       
-                                </div>
-                            </div>
-                        </form>
-                        <!-- /.form -->          
-                    </div>
-                    <!-- /.col -->
+                        </div>
+                    </form>
+                    <!-- /.form -->          
                 </div>
-                <!-- /.row -->
+                <!-- /.col -->
             </div>
-            <!-- /.container-fluid -->
-        </section> 
-    </x-adminlte-card>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section> 
+</x-adminlte-card>
 
     @stop
 
     @section('css')
-        <link rel="stylesheet" href="/css/admin_custom.css">
+        <link rel="stylesheet" href="http://localhost/siscertificado/vendor/almasaeed2010/adminlte/dist/css/adminlte.css">
     @stop
 
     @section('js')
-        <script> console.log('Hi!'); </script>
-        <script src="../../plugins/jquery/jquery.min.js"></script>
+    <script> console.log('Hi!'); </script>
+    <script src="http://localhost/plugins/jquery/jquery.min.js"></script>
 
-        <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="http://localhost/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-        <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-        <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-        <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-        <script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-        <script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-        <script src="../../plugins/jszip/jszip.min.js"></script>
-        <script src="../../plugins/pdfmake/pdfmake.min.js"></script>
-        <script src="../../plugins/pdfmake/vfs_fonts.js"></script>
-        <script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-        <script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
-        <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script src="http://localhost/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="http://localhost/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="http://localhost/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="http://localhost/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="http://localhost/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="http://localhost/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="http://localhost/plugins/jszip/jszip.min.js"></script>
+    <script src="http://localhost/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="http://localhost/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="http://localhost/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="http://localhost/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="http://localhost/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
-        <script src="../../dist/js/adminlte.min.js?v=3.2.0"></script>
+    <script src="http://localhost/siscertificado/vendor/almasaeed2010/adminlte/dist/js/adminlte.min.js?v=3.2.0"></script>
 
-        <script src="../../dist/js/demo.js"></script>
-        <script>
-            $(function () {
-                $("#example1").DataTable({
-                "responsive": true, "lengthChange": false, "autoWidth": false,
-                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-                }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-                $('#example2').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-                "responsive": true,
-                });
+    <script src="http://localhost/siscertificado/vendor/almasaeed2010/adminlte/dist/js/demo.js"></script>
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+            $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
             });
-        </script>
+        });
+    </script>
     @stop
