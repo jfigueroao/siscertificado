@@ -21,8 +21,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/pdf', [App\Http\Controllers\PdfController::class, 'index'])->name('pdf');
-Route::get('/licencias/regusuario', [App\Http\Controllers\UserController::class, 'index'])->name('regusuario');
-Route::get('/licencias/visualizar', [App\Http\Controllers\UserController::class, 'visualizar'])->name('visualizar');
+Route::get('/licencias/regusuario', [App\Http\Controllers\LicController::class, 'index'])->name('regusuario');
+Route::get('/licencias/visualizar', [App\Http\Controllers\LicController::class, 'visualizar'])->name('visualizar');
 Route::get('/fpdf', function (Codedge\Fpdf\Fpdf\Fpdf $fpdf) {
 
     $fpdf->AddPage();
