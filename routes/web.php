@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/pdf', [App\Http\Controllers\PdfController::class, 'index'])->name('pdf');
 Route::get('/licencias/regusuario', [App\Http\Controllers\LicController::class, 'index'])->name('regusuario');
 Route::get('/licencias/visualizar', [App\Http\Controllers\LicController::class, 'visualizar'])->name('visualizar');
+
+/* Route::post('/home', 'LicController@registrarLic'); */
+Route::post('/home', [App\Http\Controllers\LicController::class, 'registrarLic'])->name('registrarLic');
 Route::get('/fpdf', function (Codedge\Fpdf\Fpdf\Fpdf $fpdf) {
 
     $fpdf->AddPage();

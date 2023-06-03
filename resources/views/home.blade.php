@@ -812,7 +812,7 @@ Calendar
 
     <script src="../../dist/js/adminlte.min.js?v=3.2.0"></script>
 
-    <script src="../../dist/js/demo.js"></script>
+    <!-- <script src="../../dist/js/demo.js"></script> -->
     <script>
         $(function () {
             $("#example1").DataTable({

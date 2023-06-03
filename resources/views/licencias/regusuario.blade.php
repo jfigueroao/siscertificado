@@ -8,21 +8,19 @@
 
 @section('content')
 
-<x-adminlte-card title="REGISTRO LICENCIA" class="m-5" theme="dark" icon="fas fa-id-card">
+<x-adminlte-card title="REGISTRO LICENCIA" class="m-2" theme="dark" icon="fas fa-id-card">
     <section class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <form action="" id="formulario" method="POST" autocomplete="off">
+                    <form action="/siscertificado/public/home" method="POST" autocomplete="off">
                         @csrf
                         <div class="card-body">                                
                             <div class="row "> 
-
-                                <x-adminlte-card title="DATOS" class="m-2" theme="dark" icon="fas fa-id-card">
+                                <x-adminlte-card title="DATOS" class="" theme="dark" icon="fas fa-id-card">
                                     <div class="col-12">                                       
                                         <div class="row ">
-
-                                            <div class="col-md-4">
+                                            <div class="col-md-5">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <label for="">VIGENCIA</label>                                   
@@ -62,7 +60,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         {{-- Expediente --}}
@@ -77,7 +75,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-8">
+                                            <div class="col-md-9">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         {{-- Asunto --}}
@@ -102,7 +100,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         {{-- Fecha Expediente --}} 
@@ -117,22 +115,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
-                                            <!-- <div class="col-md-4">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        {{-- Fecha Emisión --}} 
-                                                        <label for="">Fecha Emisión</label>                                      
-                                                        <x-adminlte-input type="date" name="fechaEmision" id="fechaEmision" placeholder="Ingrese Fecha" label-class="text-lightblue">
-                                                            <x-slot name="prependSlot">
-                                                                <div class="input-group-text">
-                                                                    <i class="fas fa-id-card text-dark"></i>
-                                                                </div>
-                                                            </x-slot>
-                                                        </x-adminlte-input>  
-                                                    </div>
-                                                </div>
-                                            </div> -->
                                             <div class="col-md-8">
                                                 <div class="row">
                                                     <div class="col-md-12">
@@ -141,7 +123,7 @@
                                                         <x-adminlte-input type="text" name="apeNombre" id="apeNombre" placeholder="Ingrese apellidos y nombres" label-class="text-lightblue">
                                                             <x-slot name="prependSlot">
                                                                 <div class="input-group-text">
-                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                    <i class="fas fa-user text-dark"></i>
                                                                 </div>
                                                             </x-slot>
                                                         </x-adminlte-input>  
@@ -208,7 +190,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-8">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         {{-- Representante legal --}}
@@ -216,7 +198,7 @@
                                                         <x-adminlte-input type="text" name="repLegal" id="repLegal" placeholder="Representante Legal" label-class="text-lightblue">
                                                             <x-slot name="prependSlot">
                                                                 <div class="input-group-text">
-                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                    <i class="fas fa-user text-dark"></i>
                                                                 </div>
                                                             </x-slot>
                                                         </x-adminlte-input>  
@@ -238,16 +220,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- <div class="col-md-12">
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <button class="btn btn-primary" name="btnBuscar" id="btnBuscar" type="submit">
-                                                            <i class="fas fa-upload"></i>
-                                                            Registrar
-                                                        </button>                                                                       
-                                                    </div>                                       
-                                                </div>
-                                            </div> -->
                                         </div>       
                                     </div>               
                                 </x-adminlte-card>
@@ -255,240 +227,238 @@
 
                                 <x-adminlte-card title="LOCAL" class="m-2" theme="dark" icon="fas fa-id-card">
                                     <div class="col-12">                    
-                                        <!-- <form action="" id="formulario" method="POST" autocomplete="off">
-                                        @csrf      -->                      
-                                            <div class="row ">
-                                                <div class="col-md-6">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- Direccion del Establecimiento --}}
-                                                            <label for="">DIRECCION DEL ESTABLECIMIENTO</label>  
-                                                            <x-adminlte-input type="text" name="dirEstable" id="dirEstable" placeholder="Ingrese dirección" label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-map-pin text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                            </x-adminlte-input>
-                                                        </div>
+                                        <div class="row ">
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- Direccion del Establecimiento --}}
+                                                        <label for="">DIRECCION DEL ESTABLECIMIENTO</label>  
+                                                        <x-adminlte-input type="text" name="dirEstable" id="dirEstable" placeholder="Ingrese dirección" label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-map-pin text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                        </x-adminlte-input>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- NOMBRE COMERCIAL --}}
-                                                            <label for="">NOMBRE COMERCIAL</label>  
-                                                            <x-adminlte-input type="text" name="nomComercial" id="nomComercial" placeholder="Ingrese Nombre" label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                            </x-adminlte-input>
-                                                        </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- NOMBRE COMERCIAL --}}
+                                                        <label for="">NOMBRE COMERCIAL</label>  
+                                                        <x-adminlte-input type="text" name="nomComercial" id="nomComercial" placeholder="Ingrese Nombre" label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                        </x-adminlte-input>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- Nº --}}
-                                                            <label for="">Nº</label>
-                                                            <x-adminlte-input type="number" name="numero" id="numero" placeholder="Ingrese Nº" label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                            </x-adminlte-input>
-                                                        </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- Nº --}}
+                                                        <label for="">Nº</label>
+                                                        <x-adminlte-input type="number" name="numero" id="numero" placeholder="Ingrese Nº" label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                        </x-adminlte-input>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- INT --}}
-                                                            <label for="">INT</label>
-                                                            <x-adminlte-input type="number" name="telefono" id="telefono" placeholder="Ingrese telefono" label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                            </x-adminlte-input>
-                                                        </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- INT --}}
+                                                        <label for="">INT</label>
+                                                        <x-adminlte-input type="number" name="int" id="int" placeholder="Ingrese int" label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                        </x-adminlte-input>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- MZ --}}
-                                                            <label for="">MZ</label>
-                                                            <x-adminlte-input type="text" name="manzana" id="manzana" placeholder="Ingrese Mz." label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                            </x-adminlte-input>
-                                                        </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- MZ --}}
+                                                        <label for="">MZ</label>
+                                                        <x-adminlte-input type="text" name="manzana" id="manzana" placeholder="Ingrese Mz." label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                        </x-adminlte-input>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- LT. --}}
-                                                            <label for="">LT.</label>
-                                                            <x-adminlte-input type="number" name="lote" id="lote" placeholder="Ingrese Lote" label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                            </x-adminlte-input>  
-                                                        </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- LT. --}}
+                                                        <label for="">LT.</label>
+                                                        <x-adminlte-input type="number" name="lote" id="lote" placeholder="Ingrese Lote" label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                        </x-adminlte-input>  
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- C.SECT. --}}
-                                                            <label for="">C.SECT.</label>
-                                                            <x-adminlte-input type="text" name="telefono" id="telefono" placeholder="Ingrese telefono" label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                            </x-adminlte-input>  
-                                                        </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- C.SECT. --}}
+                                                        <label for="">C.SECT.</label>
+                                                        <x-adminlte-input type="text" name="cSect" id="cSect" placeholder="Ingrese cSect" label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                        </x-adminlte-input>  
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- SECTOR --}}
-                                                            <label for="">SECTOR</label>
-                                                            <x-adminlte-input type="text" name="sector" id="sector" placeholder="Ingrese sector" label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                            </x-adminlte-input>  
-                                                        </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- SECTOR --}}
+                                                        <label for="">SECTOR</label>
+                                                        <x-adminlte-input type="text" name="sector" id="sector" placeholder="Ingrese sector" label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                        </x-adminlte-input>  
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- ZONA --}}
-                                                            <label for="">ZONA</label>
-                                                            <x-adminlte-input type="number" name="zona" id="zona" placeholder="Ingrese zona" label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                            </x-adminlte-input>
-                                                        </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- ZONA --}}
+                                                        <label for="">ZONA</label>
+                                                        <x-adminlte-input type="number" name="zona" id="zona" placeholder="Ingrese zona" label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                        </x-adminlte-input>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- AREA --}}
-                                                            <label for="">AREA</label>  
-                                                            <x-adminlte-input name="area" id="area" placeholder="Ingrese area" label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                            </x-adminlte-input>  
-                                                        </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- AREA --}}
+                                                        <label for="">AREA</label>  
+                                                        <x-adminlte-input name="area" id="area" placeholder="Ingrese area" label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                        </x-adminlte-input>  
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- Giro del Establecimiento --}}
-                                                            <label for="">GIRO DEL ESTABLECIMIENTO</label>  
-                                                            <x-adminlte-input type="text" name="giroEstable" id="giroEstable" placeholder="Ingrese giro" label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                            </x-adminlte-input>  
-                                                        </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- Giro del Establecimiento --}}
+                                                        <label for="">GIRO DEL ESTABLECIMIENTO</label>  
+                                                        <x-adminlte-input type="text" name="giroEstable" id="giroEstable" placeholder="Ingrese giro" label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                        </x-adminlte-input>  
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- NIVEL DE RIESGO --}}
-                                                            <label for="">NIVEL DE RIESGO</label>  
-                                                            <x-adminlte-select type="text" name="tipoNivel" id="tipoNivel" placeholder="Ingrese Nivel" label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-exclamation-triangle text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                                <option>--Seleccione--</option>
-                                                                <option>Nivel de Riesgo Bajo</option>
-                                                                <option>Nivel de Riesgo Medio</option>
-                                                                <option>Nivel de Riesgo Alto</option>
-                                                                <option>Nivel de Riesgo Muy alto</option>
-                                                            </x-adminlte-select>  
-                                                        </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- NIVEL DE RIESGO --}}
+                                                        <label for="">NIVEL DE RIESGO</label>  
+                                                        <x-adminlte-select type="text" name="nivelRiesgo" id="nivelRiesgo" placeholder="Ingrese Nivel" label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-exclamation-triangle text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                            <option>--Seleccione--</option>
+                                                            <option>Nivel de Riesgo Bajo</option>
+                                                            <option>Nivel de Riesgo Medio</option>
+                                                            <option>Nivel de Riesgo Alto</option>
+                                                            <option>Nivel de Riesgo Muy alto</option>
+                                                        </x-adminlte-select>  
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- ZONIFICACION --}}
-                                                            <label for="">ZONIFICACION</label>  
-                                                            <x-adminlte-input type="text" name="zonificacion" id="zonificacion" placeholder="Zonificacion" label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                            </x-adminlte-input>  
-                                                        </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- ZONIFICACION --}}
+                                                        <label for="">ZONIFICACION</label>  
+                                                        <x-adminlte-input type="text" name="zonificacion" id="zonificacion" placeholder="Zonificacion" label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-id-card text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                        </x-adminlte-input>  
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- 2 --}}
-                                                            <label for="">ESTABLECIMIENTO</label>  
-                                                            <x-adminlte-textarea type="text" name="2" id="2" placeholder="Ingrese zona" label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-map-pin text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                            </x-adminlte-textarea>  
-                                                        </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- 2 --}}
+                                                        <label for="">ESTABLECIMIENTO</label>  
+                                                        <x-adminlte-textarea type="text" name="estable" id="estable" placeholder="Ingrese zona" label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-map-pin text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                        </x-adminlte-textarea>  
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            {{-- OBSERVACIONES --}}
-                                                            <label for="">OBSERVACIONES</label>  
-                                                            <x-adminlte-textarea type="text" name="obsevacion" id="observacion" placeholder="Ingrese observación" label-class="text-lightblue">
-                                                                <x-slot name="prependSlot">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fas fa-id-card text-dark"></i>
-                                                                    </div>
-                                                                </x-slot>
-                                                            </x-adminlte-textarea>  
-                                                        </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {{-- OBSERVACIONES --}}
+                                                        <label for="">OBSERVACIONES</label>  
+                                                        <x-adminlte-textarea type="text" name="observacion" id="observacion" placeholder="Ingrese observación" label-class="text-lightblue">
+                                                            <x-slot name="prependSlot">
+                                                                <div class="input-group-text">
+                                                                    <i class="fas fa-comment-dots text-dark"></i>
+                                                                </div>
+                                                            </x-slot>
+                                                        </x-adminlte-textarea>  
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                            </div>
+                                            <div class="col-md-4">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         {{-- RECIBO DE PAGO --}}
@@ -542,7 +512,6 @@
                                     </div>
                                 </x-adminlte-card>
                             </div>
-                                {{-- @push('js')<script>$(() => $("#drPlaceholder").val(''))</script>@endpush --}}
                         </div>
                         <div class="col-md-12">
                             <div class="row">
@@ -592,7 +561,7 @@
 
     <script src="http://localhost/siscertificado/vendor/almasaeed2010/adminlte/dist/js/adminlte.min.js?v=3.2.0"></script>
 
-    <script src="http://localhost/siscertificado/vendor/almasaeed2010/adminlte/dist/js/demo.js"></script>
+    <!-- <script src="http://localhost/siscertificado/vendor/almasaeed2010/adminlte/dist/js/demo.js"></script> -->
     <script>
         $(function () {
             $("#example1").DataTable({
