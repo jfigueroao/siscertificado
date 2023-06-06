@@ -331,7 +331,7 @@ return [
         ],
         [
             'text' => 'Tipos de Licencias',
-            'url'  => 'admin/settings',
+            'url'  => '',
             'icon' => 'fas fa-certificate',
         ],
         [

@@ -23,6 +23,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/pdf', [App\Http\Controllers\PdfController::class, 'index'])->name('pdf');
 Route::get('/licencias/regusuario', [App\Http\Controllers\LicController::class, 'index'])->name('regusuario');
+Route::get('/licencias/reglicencia', [App\Http\Controllers\LicController::class, 'index'])->name('reglicencia');
 Route::get('/licencias/visualizar', [App\Http\Controllers\LicController::class, 'visualizar'])->name('visualizar');
 
 /* Route::post('/home', 'LicController@registrarLic'); */
