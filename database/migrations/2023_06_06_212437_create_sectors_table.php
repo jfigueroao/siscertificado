@@ -13,15 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('giros', function (Blueprint $table) {
+        Schema::create('sectors', function (Blueprint $table) {
             $table->id();
-            
-            $table->string('codGiro');
+
+            $table->string('codSector');
             $table->string('Nombre');
             $table->string('cod1');
             $table->string('cod2');
             $table->string('cod3');
             $table->string('cod4');
+            $table->string('cod5');
+            $table->string('cod6');
+            $table->string('cod7');
+            $table->string('cod8');
+            $table->string('cod9');
+
+            $table->timestamps();
         });
     }
 
@@ -32,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('giros');
+        Schema::dropIfExists('sectors');
     }
 };
