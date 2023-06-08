@@ -2,22 +2,28 @@
 
 @section('title', 'Dashboard')
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"> -->
 
-<link rel="stylesheet" href="http://localhost/plugins/fontawesome-free/css/all.min.css">
+{{-- <!-- <link rel="stylesheet" href="http://localhost/plugins/fontawesome-free/css/all.min.css">
 
 <link rel="stylesheet" href="http://localhost/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="http://localhost/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 <link rel="stylesheet" href="http://localhost/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 
-<link rel="stylesheet" href="http://localhost/siscertificado/vendor/almasaeed2010/adminlte/dist/css/adminlte.min.css?v=3.2.0">
+<link rel="stylesheet" href="http://localhost/siscertificado/vendor/almasaeed2010/adminlte/dist/css/adminlte.min.css?v=3.2.0"> --> --}}
+
+<!-- <style>
+    table.dataTable thead tr {
+        background-color: #73AEF9;
+}
+</style> -->
 
 @section('content_header')
 
 @stop
 
 @section('content')
-
+<br>
 <x-adminlte-card title="LOCAL" class="m-2" theme="dark" icon="fas fa-id-card">
     <div class="col-12">                                         
         <div class="row">
@@ -26,8 +32,8 @@
                     <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
                         <div class="row">
                             <div class="col-sm-12">
-                                <table id="example1" class="table table-bordered table-striped dataTable dtr-inline collapsed" aria-describedby="example1_info">
-                                    <thead>
+                                <table id="example2" class="table table-bordered table-striped dataTable dtr-inline collapsed" aria-describedby="example1_info">
+                                    <thead class="text-center text-nowrap bg-info ">
                                         <tr>
                                             <th>LICENCIA</th>
                                             <th>PERIODO</th>
@@ -186,42 +192,4 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
-    <script src="http://localhost/plugins/jquery/jquery.min.js"></script>
-
-    <script src="http://localhost/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script src="http://localhost/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="http://localhost/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="http://localhost/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="http://localhost/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-    <script src="http://localhost/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="http://localhost/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-    <script src="http://localhost/plugins/jszip/jszip.min.js"></script>
-    <script src="http://localhost/plugins/pdfmake/pdfmake.min.js"></script>
-    <script src="http://localhost/plugins/pdfmake/vfs_fonts.js"></script>
-    <script src="http://localhost/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-    <script src="http://localhost/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-    <script src="http://localhost/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-
-    <script src="http://localhost/siscertificado/vendor/almasaeed2010/adminlte/dist/js/adminlte.min.js?v=3.2.0"></script>
-
-    <!-- <script src="http://localhost/siscertificado/vendor/almasaeed2010/adminlte/dist/js/demo.js"></script> -->
-    <script>
-        $(function () {
-            $("#example1").DataTable({
-            "responsive": true, "lengthChange": false, "autoWidth": false,
-            "buttons": ["csv", "excel", "pdf"]
-            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-            $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-            "responsive": true,
-            });
-        });
-    </script>
 @stop

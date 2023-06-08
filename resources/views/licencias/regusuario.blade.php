@@ -7,13 +7,13 @@
 @stop
 
 @section('content')
-
+<br>
 <x-adminlte-card title="REGISTRO LICENCIA" class="m-2" theme="dark" icon="fas fa-id-card">
     <section class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <form action="/siscertificado/public/home" method="POST" autocomplete="off">
+                    <form action="registrarlicencia" method="POST" autocomplete="off">
                         @csrf
                         <div class="card-body">                                
                             <div class="row "> 
@@ -338,13 +338,16 @@
                                                     <div class="col-md-12">
                                                         {{-- SECTOR --}}
                                                         <label for="">SECTOR</label>
-                                                        <x-adminlte-input type="text" name="sector" id="sector" placeholder="Ingrese sector" label-class="text-lightblue">
+                                                        <x-adminlte-select type="text" name="sector" id="sector" placeholder="Ingrese sector" label-class="text-lightblue">
                                                             <x-slot name="prependSlot">
                                                                 <div class="input-group-text">
                                                                     <i class="fas fa-id-card text-dark"></i>
                                                                 </div>
                                                             </x-slot>
-                                                        </x-adminlte-input>  
+                                                            @foreach ($sector as $sectors)
+                                                            <option>{{ $sectors->nombre }}</option>
+                                                            @endforeach
+                                                        </x-adminlte-select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -383,13 +386,16 @@
                                                     <div class="col-md-12">
                                                         {{-- Giro del Establecimiento --}}
                                                         <label for="">GIRO DEL ESTABLECIMIENTO</label>  
-                                                        <x-adminlte-input type="text" name="giroEstable" id="giroEstable" placeholder="Ingrese giro" label-class="text-lightblue">
+                                                        <x-adminlte-select type="text" name="giroEstable" id="giroEstable" placeholder="Ingrese giro" label-class="text-lightblue">
                                                             <x-slot name="prependSlot">
                                                                 <div class="input-group-text">
                                                                     <i class="fas fa-id-card text-dark"></i>
                                                                 </div>
                                                             </x-slot>
-                                                        </x-adminlte-input>  
+                                                            @foreach ($giro as $giros)
+                                                            <option>{{ $giros->nombre }}</option>
+                                                            @endforeach
+                                                        </x-adminlte-select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -541,29 +547,9 @@
     @stop
 
     @section('js')
-    <script> console.log('Hi!'); </script>
-    <script src="http://localhost/plugins/jquery/jquery.min.js"></script>
-
-    <script src="http://localhost/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script src="http://localhost/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="http://localhost/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="http://localhost/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="http://localhost/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-    <script src="http://localhost/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="http://localhost/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-    <script src="http://localhost/plugins/jszip/jszip.min.js"></script>
-    <script src="http://localhost/plugins/pdfmake/pdfmake.min.js"></script>
-    <script src="http://localhost/plugins/pdfmake/vfs_fonts.js"></script>
-    <script src="http://localhost/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-    <script src="http://localhost/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-    <script src="http://localhost/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-
-    <script src="http://localhost/siscertificado/vendor/almasaeed2010/adminlte/dist/js/adminlte.min.js?v=3.2.0"></script>
-
-    <!-- <script src="http://localhost/siscertificado/vendor/almasaeed2010/adminlte/dist/js/demo.js"></script> -->
+    <script> console.log('Hi!'); </script>    
     <script>
-        $(function () {
+        /* $(function () {
             $("#example1").DataTable({
             "responsive": true, "lengthChange": false, "autoWidth": false,
             "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
@@ -577,6 +563,6 @@
             "autoWidth": false,
             "responsive": true,
             });
-        });
+        }); */
     </script>
     @stop

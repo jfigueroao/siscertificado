@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Registro;
+use App\Models\Sector;
+use App\Models\Giro;
 /* use App\Models\User; */
 
 class LicController extends Controller
@@ -11,7 +13,13 @@ class LicController extends Controller
     
     public function index(){
 
-        return view('licencias/regusuario');
+        $sector = sector::orderBy('nombre', 'asc')
+                    ->get();
+
+        $giro = giro::orderBy('nombre', 'asc')
+                    ->get();
+        
+        return view('licencias/regusuario', compact('sector','giro'));
     }
 
     public function visualizar(){
@@ -27,6 +35,13 @@ class LicController extends Controller
 
         /* get_date(); */
         /* año actual */
+
+        /* return response()->json([
+            'message' => 'Registro exitoso'
+        ], 200); */
+
+        /* $respuesta = $request->except('_token'); */
+        /* return response()->json($respuesta); */
 
         $insertTicket = new registro();
 
@@ -70,5 +85,18 @@ class LicController extends Controller
         return redirect('/home');
 
         /* return view('licencias/regusuario', compact('registro')); */
+    }
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $respuesta = $request->except('_token');
+
+        /* redirect()->route('home')->with('respuesta', $respuesta); */
+        return response()->json($respuesta);
     }
 }
