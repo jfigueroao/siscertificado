@@ -321,8 +321,12 @@ return [
             'icon'    => 'fas fa-user-tie',
             'submenu' => [
                 [
-                    'text' => 'Usuario',
-                    'url'  => 'aUsuario',
+                    'text' => 'Registrar Usuario',
+                    'url'  => 'registroUsuario',
+                ],
+                [
+                    'text' => 'Lista de Usuarios',
+                    'url'  => 'listaUsuario',
                 ],
             ],
         ],

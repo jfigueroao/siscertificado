@@ -38,7 +38,7 @@
                                                             <option>CINCO (05) AÑOS</option>
                                                             <option>CESE (BAJA DE LICENCIA)</option>
                                                             <option>ANULADO</option>
-                                                        </x-adminlte-select>  
+                                                        </x-adminlte-select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -548,33 +548,6 @@
 
     @section('js')
     <script> console.log('Hi!'); </script>    
-
-
-    <script>
-        
-        /* let giros = ["PACHACAMAC", "MANCHAY", "JOSÉ GALVEZ"]; */
-        /* <option>{{ $giros->nombre }}</option> */
-
-        let giroEstable=document.getElementById("giroEstable")
-        let estable=document.getElementById("estable")
-
-        function Recorrer(combobox, valores)
-        {
-            estable.innerHTML=''
-            for(let index of valores){
-                combobox.innerHTML+=`
-                    <option>${index}</option>
-                `
-            }
-        }
-
-        /* giroEstable.addEventListener('change',(e)=>{
-            let dato=e.target.value
-            while(dato){
-                Recorrer(estable, dato)
-            }
-        }); */
-    </script>
 
     <script>
         /* $(function () {
