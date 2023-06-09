@@ -315,6 +315,17 @@ return [
                 ],
             ],
         ],
+
+        [
+            'text'    => 'Administrador',
+            'icon'    => 'fas fa-user-tie',
+            'submenu' => [
+                [
+                    'text' => 'Usuario',
+                    'url'  => 'aUsuario',
+                ],
+            ],
+        ],
        
     ],
 
